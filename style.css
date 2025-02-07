@@ -67,6 +67,7 @@ h2 {
     color: rgb(128, 126, 123);
     text-align: center;
     flex: 1;
+    word-wrap: break-word;
 }
 .event {
     text-align: center;
