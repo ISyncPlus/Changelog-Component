@@ -16,30 +16,85 @@ main {
     padding: 30px;
     width:70%;
     height: 70%;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
-h2 {
-    color:rgb(128, 126, 123);
-    font-size: 14px;
-    margin-top:10px;
-}
-.logs {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.logs::before {
+.logs::before { /*Vertical Line*/
     content: "";
+    position: absolute;
     top: 0;
     left: 50%;
     width: 3px;
     height: 100%;
     background: black;
-    transform: translateX:(-50%);
+    transform: translateX(-50%);
+    border-radius: 5px;
+}
+h1 {
+    text-align: center;
+}
+h2 {
+    color:rgb(128, 126, 123);
+    font-size: 14px;
+    margin-top:10px;
+    text-align: center;
+}
+.logs {
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top:30px;
+}
+.entry {
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content:space-between;
+    flex-direction: row;
+    position: relative;
+    width:100%;
 }
 
+.dot {
+    width: 15px;
+    height: 15px;
+    background: black;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+}
 
+.date {
+    color: rgb(128, 126, 123);
+    text-align: center;
+    flex: 1;
+}
+.event {
+    text-align: center;
+    word-wrap: normal;
+    flex:1;
+}
+
+.last {
+    margin-top: 50px;
+    width: 90%;
+    display:flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.button {
+    padding: 15px 30px;
+    color: white;
+    background-color: black;
+    border: 1px solid transparent;
+    border-radius: 7px; 
+    transition: 0.2s;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: white;
+    border-color: black;
+    color: black;
+}
 
